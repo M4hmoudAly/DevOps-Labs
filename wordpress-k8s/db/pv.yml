@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolume # Create a PV
+metadata:
+  name: mysql-pv # Sets PV's name
+  labels:
+    app: wordpress # Sets PV's type to local
+spec:
+  storageClassName: standard
+  capacity:
+    storage: 10Gi # Sets PV Volume
+  accessModes:
+    - ReadWriteMany
+  hostPath:
+    path: "/mnt/data" # Sets the volume's path

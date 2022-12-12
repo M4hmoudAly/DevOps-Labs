@@ -1,0 +1,13 @@
+secretGenerator:
+- name: mysql-pass
+  literals:
+  - password=YOUR_PASSWORD
+resources:
+  - ./db/pv.yml
+  - ./db/volume.yml
+  - ./db/statefulset.yml
+  - ./db/svc.yml
+  - ./app/pv.yml
+  - ./app/volume.yml
+  - ./app/daemonSet.yml
+  - ./app/svc.yml
